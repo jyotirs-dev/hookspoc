@@ -1,9 +1,9 @@
-import './IngredientList.css';
+import IngredientListSection from '../UI/Ingredient/IngredientListSection';
 
 const IngredientList = props => {
 	console.log("rendering ingrdient list")
 	return (
-		<section className="ingredient-list">
+		<IngredientListSection>
 			<h2>Loaded Ingredients</h2>
 			<ul>
 				{props.ingredients.map(ig => (
@@ -15,7 +15,7 @@ const IngredientList = props => {
 					</li>
 				))}
 			</ul>
-		</section>
+		</IngredientListSection>
 	);
 };
 

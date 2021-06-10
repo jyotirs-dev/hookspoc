@@ -11,32 +11,3 @@ body {
   margin: 0;
 }
 
-button{
-  font: inherit;
-  padding: 0.5rem 2rem;
-  margin: 0.5rem 0;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover,
-button:active {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
-}
-
-button:focus {
-  outline: none;
-}
-
-.light button{
-  background: #ff2058;
-  color: white;
-  border: 1px solid #ff2058;
-}
-
-.dark button{
-  background: #f0f0f0;
-  color: black;
-  border: 1px solid #f0f0f0;
-}
-

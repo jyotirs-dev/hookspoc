@@ -1,7 +1,8 @@
-import { useContext } from "react"
-import Header from "./Header"
-import { Helmet } from "react-helmet"
-import {ThemeContext} from "../../contexts/ThemeContext";
+import { useContext } from 'react';
+import NavHeader from './NavHeader';
+import { Helmet } from 'react-helmet';
+import ThemeSwitcher from './ThemeSwitcher';
+import {ThemeContext} from '../../contexts/ThemeContext';
 
 const Layout = ({ children }) => {
 	const { theme } = useContext(ThemeContext);
@@ -14,7 +15,9 @@ const Layout = ({ children }) => {
 			<Helmet>
 				<style>{bg}</style>
 			</Helmet>
-			<Header />
+			<NavHeader>
+				<ThemeSwitcher />
+			</NavHeader>
 				{children}
 		</div>
 	)

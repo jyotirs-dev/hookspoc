@@ -2,6 +2,7 @@ import {useState} from 'react';
 import FormSection from '../UI/Forms/FormSection';
 import FormControl from '../UI/Forms/FormControl';
 import FormAction from '../UI/Forms/FormAction';
+import FormButton from '../UI/Forms/FormButton';
 import Card from '../UI/Card';
 
 const IngredientForm = props => {
@@ -32,7 +33,7 @@ const IngredientForm = props => {
 						<input type="number" id="amount" value={amount} onChange={(event)=> setAmount(event.target.value)}/>
 					</FormControl>
 					<FormAction>
-						<button type="submit">Add Ingredient</button>
+						<FormButton type="submit">Add Ingredient</FormButton>
 					</FormAction>
 				</form>
 			</Card>
