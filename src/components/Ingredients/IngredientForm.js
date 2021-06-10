@@ -1,6 +1,8 @@
 import {useState} from 'react';
+import FormSection from '../UI/Forms/FormSection';
+import FormControl from '../UI/Forms/FormControl';
+import FormAction from '../UI/Forms/FormAction';
 import Card from '../UI/Card';
-import './IngredientForm.css';
 
 const IngredientForm = props => {
 	
@@ -18,23 +20,23 @@ const IngredientForm = props => {
 	};
 
 	return (
-		<section className="ingredient-form">
+		<FormSection>
 			<Card>
 				<form onSubmit={submitHandler}>
-					<div className="form-control">
+					<FormControl>
 						<label htmlFor="title">Name</label>
 						<input type="text" id="title" value={title} onChange={(event)=> setTitle(event.target.value)}/>
-					</div>
-					<div className="form-control">
+					</FormControl>
+					<FormControl>
 						<label htmlFor="amount">Amount</label>
 						<input type="number" id="amount" value={amount} onChange={(event)=> setAmount(event.target.value)}/>
-					</div>
-					<div className="ingredient-form__actions">
+					</FormControl>
+					<FormAction>
 						<button type="submit">Add Ingredient</button>
-					</div>
+					</FormAction>
 				</form>
 			</Card>
-		</section>
+		</FormSection>
 	);
 };
 

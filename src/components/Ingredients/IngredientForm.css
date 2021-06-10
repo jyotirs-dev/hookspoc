@@ -1,10 +1,4 @@
-.ingredient-form {
-  width: 30rem;
-  margin: 2rem auto;
-  max-width: 80%;
-}
-
-.form-control label,
+/* .form-control label,
 .form-control input {
   display: block;
   width: 100%;
@@ -21,7 +15,7 @@
 .form-control input:focus {
   outline: none;
   border-bottom-color: #ff2058;
-}
+} */
 
 .ingredient-form__actions {
   display: flex;

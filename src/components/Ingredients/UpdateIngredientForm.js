@@ -1,7 +1,8 @@
 import {memo, useState,useEffect} from 'react';
-
+import FormSection from '../UI/Forms/FormSection';
+import FormControl from '../UI/Forms/FormControl';
+import FormAction from '../UI/Forms/FormAction';
 import Card from '../UI/Card';
-import './IngredientForm.css';
 
 const UpdateIngredientForm = memo(props => {
 
@@ -24,23 +25,23 @@ const UpdateIngredientForm = memo(props => {
 	};
 
 	return (
-		<section className="ingredient-form">
+		<FormSection>
 		<Card>
 			<form onSubmit={submitHandler}>
-			<div className="form-control">
+			<FormControl>
 				<label htmlFor="title">Name</label>
 				<input type="text" id="edittitle" value={activeTitle} onChange={(event)=> setTitle(event.target.value)}/>
-			</div>
-			<div className="form-control">
+			</FormControl>
+			<FormControl>
 				<label htmlFor="amount">Amount</label>
 				<input type="number" id="editamount" value={activeAmount} onChange={(event)=> setAmount(event.target.value)}/>
-			</div>
-			<div className="ingredient-form__actions">
+			</FormControl>
+			<FormAction>
 				<button type="submit">Update Ingredient</button>
-			</div>
+			</FormAction>
 			</form>
 		</Card>
-		</section>
+		</FormSection>
 	);
 });
 

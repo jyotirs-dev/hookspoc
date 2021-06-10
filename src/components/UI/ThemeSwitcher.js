@@ -1,15 +1,16 @@
 import {useContext} from 'react';
+import SwitchButton from './ThemeSwitchButton';
 import {ThemeContext} from '../../contexts/ThemeContext';
 
 function ThemeSwitcher() {
 	const {theme,themeHandler } = useContext(ThemeContext)
 
 	return (
-		<button
+		<SwitchButton
 			onClick={themeHandler}
-			className={`button-switch ${theme}`}
+			className={theme}
 		>
-		</button>
+		</SwitchButton>
 	)
 }
 

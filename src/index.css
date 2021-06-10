@@ -19,14 +19,6 @@ button{
   cursor: pointer;
 }
 
-.button-switch{
-  font: inherit;
-  padding: 1rem;
-  margin: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
 button:hover,
 button:active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.26);
