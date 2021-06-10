@@ -21,11 +21,17 @@ const IngredientListSection = styled.section`
 	& li {
 		margin: 1rem 0;
 		padding: 0.5rem 1rem;
-		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.26);
 		display: flex;
 		justify-content: space-between;
 	}
-  
+
+	.dark & li{
+		box-shadow: 0 1px 4px #f0f0f0;
+	}
+	
+	.light & li{
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.26);
+	}
 `
 
 export default IngredientListSection;
