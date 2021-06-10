@@ -8,7 +8,7 @@ function ThemeSwitcher() {
 	return (
 		<SwitchButton
 			onClick={themeHandler}
-			theme={theme}
+			themecolor={theme}
 		>
 		</SwitchButton>
 	)

@@ -16,19 +16,12 @@ const FormButton = styled.button`
 	&:focus {
 		outline: none;
 	}
-
-	.light &{
-		background: #ff2058;
-		color: white;
-		border: 1px solid #ff2058;
-	}
-	  
-	.dark &{
-		background: #f0f0f0;
-		color: black;
-		border: 1px solid #f0f0f0;
-	}
-  
+	
+	${(props) => `
+     background-color: ${props.theme[`$switch-btn-${props.themecolor}`]};
+	 color: ${props.theme[`$btn-color-${props.themecolor}`]};
+	 border:  ${props.theme[`$btn-border-${props.themecolor}`]};
+  `};
 `
 
 export default FormButton;

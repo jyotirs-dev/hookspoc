@@ -24,13 +24,11 @@ const IngredientListSection = styled.section`
 		display: flex;
 		justify-content: space-between;
 	}
-
-	.dark & li{
-		box-shadow: 0 1px 4px #f0f0f0;
-	}
 	
-	.light & li{
-		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.26);
+	& li{
+		${(props) => `
+	 		box-shadow:  ${props.theme[`$border-${props.themecolor}`]};
+  		`};
 	}
 `
 

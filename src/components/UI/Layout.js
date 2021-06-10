@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import NavHeader from './NavHeader';
 import { Helmet } from 'react-helmet';
 import ThemeSwitcher from './ThemeSwitcher';
+import LayoutStyle from '../UI/LayoutStyle';
 import {ThemeContext} from '../../contexts/ThemeContext';
 
 const Layout = ({ children }) => {
@@ -11,7 +12,7 @@ const Layout = ({ children }) => {
 			? "body {background-color: #000; color: #fff;}"
 			: "body {background-color: #fff; color: #000;}"
 	return (
-		<div className={theme}>
+		<LayoutStyle themecolor={theme}>
 			<Helmet>
 				<style>{bg}</style>
 			</Helmet>
@@ -19,7 +20,7 @@ const Layout = ({ children }) => {
 				<ThemeSwitcher />
 			</NavHeader>
 				{children}
-		</div>
+		</LayoutStyle>
 	)
 }
 
