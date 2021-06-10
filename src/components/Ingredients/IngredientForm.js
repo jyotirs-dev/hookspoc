@@ -6,6 +6,7 @@ const IngredientForm = props => {
 	
 	const [title,setTitle] = useState("");
 	const [amount,setAmount] = useState("");
+	
 	console.log("rendering ingrdient form")
 	const submitHandler = event => {
 		event.preventDefault();

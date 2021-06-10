@@ -1,7 +1,14 @@
+import { useContext } from "react";
 import './Card.css';
+import {ThemeContext} from "../../contexts/ThemeContext";
 
 const Card = props => {
-	return <div className="card">{props.children}</div>;
+	const { theme } = useContext(ThemeContext);
+	return(
+		<div className={`card ${theme}`}>
+			{props.children}
+		</div>
+	) 
 };
 
 export default Card;

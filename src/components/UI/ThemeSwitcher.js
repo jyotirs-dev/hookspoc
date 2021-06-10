@@ -2,14 +2,13 @@ import {useContext} from 'react';
 import {ThemeContext} from '../../contexts/ThemeContext';
 
 function ThemeSwitcher() {
-	const {themeHandler } = useContext(ThemeContext)
+	const {theme,themeHandler } = useContext(ThemeContext)
 
 	return (
 		<button
 			onClick={themeHandler}
-			className="button-theme"
+			className={`button-switch ${theme}`}
 		>
-				Switch Theme
 		</button>
 	)
 }

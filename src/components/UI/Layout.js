@@ -10,13 +10,13 @@ const Layout = ({ children }) => {
 			? "body {background-color: #000; color: #fff;}"
 			: "body {background-color: #fff; color: #000;}"
 	return (
-		<>
+		<div className={theme}>
 			<Helmet>
 				<style>{bg}</style>
 			</Helmet>
 			<Header />
 				{children}
-		</>
+		</div>
 	)
 }
 
